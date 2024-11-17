@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Predict House Price in Viman Nagar</h1>
+            <form action="/predict" method="POST">
+                <label for="area">Area (in sq. ft.):</label>
+                <input type="number" name="area" id="area" required>
+
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" name="bedrooms" id="bedrooms" required>
+
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" name="bathrooms" id="bathrooms" required>
+
+                <button type="submit" class="btn">Predict Price</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
